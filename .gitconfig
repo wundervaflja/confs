@@ -1,0 +1,27 @@
+[user]
+	name = wundervaflja
+	email = gorysko@gmail.com
+[core]
+	excludesfile = /Users/gorysko/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[pull]
+	rebase = true
+[merge]
+	tool = vimdiff
+[branch]
+    autosetupmerge = true
+[push]
+	default = current
+[pull]
+    ff = only
+[alias]
+    hard = reset --hard HEAD
+    uncommit = reset --soft HEAD^
